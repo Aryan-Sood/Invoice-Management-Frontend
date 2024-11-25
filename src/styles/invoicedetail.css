@@ -1,0 +1,87 @@
+/* General Styles for the Page */
+.invoice-detail-page {
+    background-color: #f4f4f9; /* Subtle background color */
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .invoice-detail-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0; /* Subtle border around the container */
+  }
+  
+  .invoice-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eeeeee; /* Thin separator line under the title */
+    padding-bottom: 10px;
+  }
+  
+  .invoice-info {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .invoice-info div {
+    margin-bottom: 12px;
+    font-weight: 600; /* Bold labels for information */
+  }
+  
+  .invoice-items {
+    margin-top: 30px;
+  }
+  
+  .invoice-items table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+  
+  .invoice-items th,
+  .invoice-items td {
+    padding: 15px 20px;
+    text-align: left;
+    border: 1px solid #ddd;
+    background-color: #fff;
+  }
+  
+  .invoice-items th {
+    background-color: #f0f0f0;
+    color: #333;
+    font-weight: 600; /* Bold table headers */
+    text-transform: uppercase; /* Uppercase headers for better readability */
+  }
+  
+  .invoice-items td {
+    color: #555;
+  }
+  
+  .invoice-items tr:hover {
+    background-color: #f9f9f9; /* Subtle hover effect */
+  }
+  
+  .invoice-items td:nth-child(4) {
+    text-align: right; /* Align Total to the right for better readability */
+  }
+  
+  .invoice-total {
+    text-align: right;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #4CAF50; /* Green for the total amount */
+  }
+  
+  .error {
+    color: red;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
