@@ -1,0 +1,21 @@
+.invoice-card {
+    background-color: #f9f9f9; /* Light gray for subtle card background */
+    border: 1px solid #e0e0e0; /* Light border for definition */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 16px; /* Inner spacing */
+    margin: 16px 0; /* Space between cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .invoice-card:hover {
+    transform: translateY(-5px); /* Slight upward movement */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+  }
+  
+  body {
+    background-color: #ffffff; /* White background for the page */
+    color: #000000; /* Black text for readability */
+    margin: 0;
+    font-family: Arial, sans-serif; /* Clean, professional font */
+  }
