@@ -23,3 +23,24 @@ export const fetchInvoiceById = async (id) => {
     throw error;
   }
 };
+
+export const createInvoice = async (invoiceData) => {
+  try{
+    console.log(invoiceData)
+    let details = []
+    invoiceData.details.forEach((item) => details.push({
+      description: item.description,
+      quantity: parseInt(item.quantity),
+      unit_price: parseFloat(item.unit_price)
+    }));
+    await axios.post(`${API_BASE_URL}/create`, {
+      invoice_number: invoiceData.invoiceNumber,
+      customer_name: invoiceData.customerName,
+      date: invoiceData.date,
+      details: details
+    })
+  }
+  catch(error){
+    console.error(`Error creating invoice`, error);
+  }
+}
