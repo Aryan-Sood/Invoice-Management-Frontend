@@ -15,7 +15,7 @@ const TopBar = () => {
     <div className="top-bar">
       <div className="top-bar-buttons">
         <button className="top-bar-button" onClick={()=>{navigate('/create')}}>Create</button>
-        <button className="top-bar-button" style={{backgroundColor: 'red'}} onClick={handleDeleteInvoices}>Delete</button>
+        <button className="top-bar-button" style={{backgroundColor: 'red'}} onClick={handleDeleteInvoices}>Delete All</button>
       </div>
       <h1 className="top-bar-title">Invoice Management</h1>
     </div>

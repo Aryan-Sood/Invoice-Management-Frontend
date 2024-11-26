@@ -14,7 +14,7 @@ const CreateInvoice = () => {
     details: [],
   });
 
-  const [buttonState, setButtonState] = useState(true);
+  const [buttonText, setButtonText] = useState('Create Invoice');
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -37,7 +37,7 @@ const CreateInvoice = () => {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-    setButtonState(false);
+    setButtonText('Creating Invoice...');
     console.log('form data', formData)
     await createInvoice(formData).then(response => navigate('/'));
   };
@@ -110,7 +110,7 @@ const CreateInvoice = () => {
             Add Item
           </button>
         </div>
-        <button disabled={!buttonState} type="submit">Create Invoice</button>
+        <button type="submit">{buttonText}</button>
       </form>
     </div>
   );

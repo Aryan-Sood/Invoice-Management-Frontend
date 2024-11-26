@@ -10,7 +10,10 @@ const InvoiceDetailPage = () => {
   const [invoiceData, setInvoiceData] = useState(null);
   const [error, setError] = useState(null);
 
+  const [deleteText, setDeleteText] = useState('Delete Invoice')
+
   const handleDeleteInvoice = async() =>{
+    setDeleteText('Deleting Invoice...')
     await deleteInvoiceByID(id).then((response) => navigate('/'));
   }
 
@@ -65,7 +68,7 @@ const InvoiceDetailPage = () => {
             </table>
           </div>
           <br></br>
-          <button className="top-bar-button" style={{backgroundColor: 'red'}} onClick={handleDeleteInvoice}>Delete</button>
+          <button className="top-bar-button" style={{backgroundColor: 'red'}} onClick={handleDeleteInvoice}>{deleteText}</button>
         </div>
       ) : (
         <p>Loading...</p>
