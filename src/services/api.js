@@ -44,3 +44,12 @@ export const createInvoice = async (invoiceData) => {
     console.error(`Error creating invoice`, error);
   }
 }
+
+export const deleteAllInvoices = async() => {
+  try{
+    await axios.delete(`${API_BASE_URL}/deleteall`)
+  }
+  catch(error){
+    console.log('Error deleting all invoices', error);
+  }
+}

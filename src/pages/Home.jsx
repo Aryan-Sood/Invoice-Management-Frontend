@@ -35,11 +35,12 @@ const Home = () => {
   return (
     <div>
       <TopBar/>
-      <div style={{ maxWidth: '600px', margin: '0 auto', paddingTop:'30px'}}>
+      {invoices.length == 0 ? <p style={{textAlign: 'center'}}>No invoices created</p> :<div style={{ maxWidth: '600px', margin: '0 auto', paddingTop:'30px'}}>
         {invoices.map((invoice) => (
           <InvoiceItem key={invoice.id} invoice={invoice} />
         ))}
-      </div>
+      </div> }
+      
     </div>
   );
 };
