@@ -10,7 +10,7 @@ const TopBar = () => {
 
     const handleDeleteInvoices = async() => {
         setDeleteText('Deleting ...')
-        await deleteAllInvoices().then((response) => navigate('/'));
+        await deleteAllInvoices().then((response) => window.location.reload());
     }
 
   return (
