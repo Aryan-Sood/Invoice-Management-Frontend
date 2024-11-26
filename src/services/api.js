@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_BASE_URL = "http://127.0.0.1:8000/api/invoices";
+// const API_BASE_URL = "http://127.0.0.1:8000/api/invoices";
+const API_BASE_URL = "http://invoice-system-backend-production.up.railway.app/api/invoices";
 
 export const fetchInvoices = async () => {
   try {
