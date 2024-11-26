@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { fetchInvoiceById } from '../services/api';
+import { useNavigate, useParams } from 'react-router-dom';
+import { fetchInvoiceById, deleteInvoiceByID } from '../services/api';
 import '../styles/invoicedetail.css';
 
 const InvoiceDetailPage = () => {
+  
+  const navigate = useNavigate();
   const { id } = useParams();
   const [invoiceData, setInvoiceData] = useState(null);
   const [error, setError] = useState(null);
+
+  const handleDeleteInvoice = async() =>{
+    await deleteInvoiceByID(id).then((response) => navigate('/'));
+  }
 
   useEffect(() => {
     fetchInvoiceById(id)
@@ -58,6 +64,8 @@ const InvoiceDetailPage = () => {
               </tbody>
             </table>
           </div>
+          <br></br>
+          <button className="top-bar-button" style={{backgroundColor: 'red'}} onClick={handleDeleteInvoice}>Delete</button>
         </div>
       ) : (
         <p>Loading...</p>
